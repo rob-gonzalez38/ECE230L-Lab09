@@ -1,6 +1,7 @@
 module d_latch(
     input D, E,
-    output Q, NotQ
+    output reg Q,
+    output NotQ
 );
     // Sensitivity list triggers on changes to D or E
     always @(D,E) begin

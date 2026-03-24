@@ -2,7 +2,7 @@ module memory_system(
     input [7:0] data,
     input store,
     input [1:0] addr,
-    output [7:0] memory_out
+    output [7:0] memory
 );
     wire [7:0] m0, m1, m2, m3;
     reg [3:0] sel_store;
@@ -25,9 +25,7 @@ module memory_system(
     byte_memory b3(data, sel_store[3], m3);
 
     // Multiplexer for Output
-    assign memory_out = (addr == 2'b00) ? m0 :
+    assign memory = (addr == 2'b00) ? m0 :
                         (addr == 2'b01) ? m1 :
                         (addr == 2'b10) ? m2 : m3;
 endmodule
-
-*/
