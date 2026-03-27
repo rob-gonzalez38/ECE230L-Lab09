@@ -22,9 +22,10 @@ In this lab, we learned how sequential logic differs from combinational logic be
 ## Lab Questions
 
 ###  Why can we not just use structural Verilog to implement latches?
+It is difficult to use structural verilog to implement latches because of timing and unpredictability.
 
 ### What is the meaning of always @(*) in a sensitivity block?
-
+The meaning of always @(*) in a sensitivity block is to create a list that includes all the signals that are read in the block. This is done rather than listing all the input signals that trigger the block.
 ### What importance is memory to digital circuits?
 
 Without memory, systems would react to inputs immediatley, and would not be able to keep track of prior inputs or save data. Memory is what allows for more advanced digital systems like most modern devices. Because of memory digital systems can save and store data to use later, enabling more complicated processess and allowing for more advanced logic.
